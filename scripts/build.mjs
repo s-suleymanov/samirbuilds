@@ -49,7 +49,7 @@ export async function build({ includeDrafts = false, outputDir = path.join(root,
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta name="theme-color" content="#fafaf8">
 ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-preview:none"><script src="/assets/profile-controls.js" defer></script>' : ''}
-<link rel="stylesheet" href="/assets/styles.css"><link rel="icon" href="/assets/favicon.svg?v=s-4" type="image/svg+xml" sizes="any"></head>
+<link rel="stylesheet" href="/assets/styles.css"><link rel="icon" href="/assets/favicon.svg?v=circle-5" type="image/svg+xml" sizes="any"></head>
 <body><a class="skip" href="#main">Skip to content</a><div class="site"><header>
 <a class="wordmark" href="/" aria-label="${esc(profile.name)} — home">${esc(profile.initials)}<span>.</span></a>
 <nav aria-label="Main navigation"><a href="/"${active === 'home' ? ' aria-current="page"' : ''}>Home</a><a href="/writing/"${active === 'writing' ? ' aria-current="page"' : ''}>Writing</a></nav>
