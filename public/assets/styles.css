@@ -68,12 +68,12 @@ footer a { text-decoration: none; }
 @media (max-width: 600px) {
   .site { padding: 0 25px; }
   header { padding: 30px 0 43px; }
-  .identity { align-items: flex-start; flex-direction: column; gap: 24px; padding-bottom: 34px; }
+  .identity { flex-direction: column; gap: 24px; padding-bottom: 34px; }
   .portrait, .portrait-frame { flex-basis: 84px; width: 84px; height: 84px; }
   h1 { font-size: 41px; }
-  .tagline { font-size: 13px; max-width: 300px; }
+  .tagline { font-size: 13px; max-width: 300px; text-align: center }
   .profile { padding-top: 29px; }
-  .profile-row { gap: 10px; margin-bottom: 29px; }
+  .profile-row { gap: 10px; margin-bottom: 29px; grid-template-columns: 90px 1fr;}
   .profile-row h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; }
   .writing-teaser { align-items: flex-start; flex-direction: column; gap: 16px; }
   .page-intro h1 { font-size: 48px; }
