@@ -8,8 +8,8 @@
     { "label": "Previously", "items": [{ "title": "TBA", "detail": "", "url": "", "placeholder": false }] },
     { "label": "Education", "items": [{ "title": "University of California, Los Angeles", "detail": "Current student · Computer Science & Cognitive Science", "url": "", "placeholder": false }] },
     { "label": "Projects", "items": [
-      { "title": "TBA", "detail": "Retail Data Indexing Platform", "url": "", "placeholder": false },
-      { "title": "TBA", "detail": "Automated B2B Lead Intelligence Software", "url": "", "placeholder": false }
+      { "title": "Founder", "detail": "Retail Data Indexing Platform", "url": "", "placeholder": false },
+      { "title": "Co-founder", "detail": "Automated B2B Lead Intelligence Software", "url": "", "placeholder": false }
     ] },
     { "label": "Investing", "items": [
       { "title": "Mobile social networking", "detail": "Investing in a mobile social networking application.", "url": "", "placeholder": false },
