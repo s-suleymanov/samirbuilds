@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650&family=Libre+Caslon+Display&display=swap');
-
 :root { --paper: #fafaf8; --ink: #1d2d3b; --muted: #657078; --line: #e3e5e4; --accent: #304d64; --card: #fff; font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--paper); font-synthesis: none; }
 * { box-sizing: border-box; }
 body { margin: 0; }

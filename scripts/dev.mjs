@@ -34,7 +34,7 @@ async function fingerprint(directory) {
 async function refresh() {
   if (pending) return pending;
   pending = (async () => {
-    const next = (await Promise.all(['content', 'posts', 'public'].map(folder => fingerprint(path.join(root, folder))))).join('|');
+    const next = (await Promise.all(['content', 'posts', 'public', 'fonts'].map(folder => fingerprint(path.join(root, folder))))).join('|');
     if (next !== signature) { await build({ includeDrafts: true, outputDir: output }); signature = next; revision++; }
   })();
   try { await pending; } finally { pending = undefined; }

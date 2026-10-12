@@ -42,12 +42,20 @@ function parsePost(text, file) {
 export async function build({ includeDrafts = false, outputDir = path.join(root, 'dist') } = {}) {
   const output = outputDir;
   const profile = JSON.parse(await readFile(path.join(root, 'content/profile.json'), 'utf8'));
+  // Include the font bytes in the HTML so rendering needs no separate font request.
+  let fontStyles = await readFile(path.join(root, 'fonts/fonts.css'), 'utf8');
+  const fontFiles = [...new Set([...fontStyles.matchAll(/url\(([\w.-]+\.woff2)\)/g)].map(match => match[1]))];
+  for (const file of fontFiles) {
+    const bytes = await readFile(path.join(root, 'fonts', file));
+    fontStyles = fontStyles.replaceAll(`url(${file})`, `url(data:font/woff2;base64,${bytes.toString('base64')})`);
+  }
   const files = (await readdir(path.join(root, 'posts'))).filter(f => f.endsWith('.md')).sort();
   const posts = (await Promise.all(files.map(async file => parsePost(await readFile(path.join(root, 'posts', file), 'utf8'), file))))
     .filter(post => includeDrafts || !post.draft).sort((a, b) => b.date - a.date || a.slug.localeCompare(b.slug));
   const shell = (content, active, title = profile.name, description = profile.tagline) => `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta name="theme-color" content="#fafaf8">
+<style data-embedded-fonts>${fontStyles}</style>
 ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-preview:none"><script src="/assets/profile-controls.js" defer></script>' : ''}
 <link rel="stylesheet" href="/assets/styles.css"><link rel="icon" href="/assets/favicon.svg?v=circle-5" type="image/svg+xml" sizes="any"></head>
 <body><a class="skip" href="#main">Skip to content</a><div class="site"><header>

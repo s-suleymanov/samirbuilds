@@ -31,6 +31,10 @@ Edit `content/profile.json`, files in `posts/`, and assets in `public/`. The `.p
 
 These measures are not access control. Any photo shown on a public page can still be downloaded through developer tools or captured in a screenshot. A private image requires restricting access or removing it from the public page. The site is currently localhost-only. When deployed, `robots.txt` and the homepage directives will be published with it. If you change the photo URL, update its matching rule in `public/robots.txt`.
 
+## Embedded fonts
+
+DM Sans and Libre Caslon Display are bundled in `fonts/` with their licenses. The build embeds the compressed font bytes directly in each page; visitors do not contact Google Fonts or download a separate font file. Font rendering briefly waits for these embedded fonts instead of first showing a fallback typeface.
+
 ## Write a blog post without touching HTML
 
 In VS Code, choose **Terminal → Run Task → New blog post** and enter a title. Or run:
