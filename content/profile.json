@@ -14,7 +14,7 @@
     { "label": "Investing", "items": [
       { "title": "Mobile social networking", "detail": "Investing in a mobile social networking application.", "url": "", "placeholder": false },
       { "title": "Consumer hardware", "detail": "Investing in a vacuum cleaner company.", "url": "", "placeholder": false },
-      { "title": "AI patent automation", "detail": "Investing in an AI-driven provisional patent automation platform.", "url": "", "placeholder": false }
+      { "title": "AI patent automation", "detail": "Investing in a patent automation platform.", "url": "", "placeholder": false }
     ] }
   ],
   "links": [
