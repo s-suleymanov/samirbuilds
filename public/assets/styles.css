@@ -73,7 +73,7 @@ footer a { text-decoration: none; }
   h1 { font-size: 41px; }
   .tagline { font-size: 13px; max-width: 300px; }
   .profile { padding-top: 29px; }
-  .profile-row { grid-template-columns: 1fr; gap: 10px; margin-bottom: 29px; }
+  .profile-row { gap: 10px; margin-bottom: 29px; }
   .profile-row h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; }
   .writing-teaser { align-items: flex-start; flex-direction: column; gap: 16px; }
   .page-intro h1 { font-size: 48px; }
