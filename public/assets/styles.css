@@ -44,8 +44,8 @@ footer a { text-decoration: none; }
 .post-list { display: grid; gap: 18px; padding: 8px 0 0; }
 .post-card { display: block; text-decoration: none; border: 1px solid var(--line); padding: 23px 26px; background: var(--card); box-shadow: 0 1px 2px #1d2d3b08; }
 .post-card:hover { color: var(--ink); border-color: #bac5cd; }
-.post-card h2 { font-size: 21px; line-height: 1.4; font-weight: 550; letter-spacing: -.35px; margin: 0 0 11px; }
-.post-card p { font-size: 16px; line-height: 1.7; color: #657078; margin: 0; }
+.post-card h2 { font-size: 27px; line-height: 1.4; font-weight: 550; letter-spacing: -.35px; margin: 0 0 2px; font-family: 'Libre Caslon Display', Georgia, serif; }
+.post-card p { font-size: 15px; line-height: 1.7; color: #657078; margin: 0; }
 .no-posts { color: var(--muted); font-size: 14px; margin: 0; }
 .empty { border: 1px solid var(--line); padding: 42px 34px; background: var(--card); margin: 0; }
 .empty .number { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 43px; color: #c0c8cd; line-height: 1; margin: 0 0 22px; }
