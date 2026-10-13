@@ -19,7 +19,7 @@ nav a[aria-current] { color: var(--ink); border-bottom: 1px solid var(--ink); }
 .portrait-frame .portrait { display: block; width: 100%; height: 100%; pointer-events: none; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; }
 .monogram { display: grid; place-items: center; background: #e9edef; color: #526677; font: 37px 'Libre Caslon Display', Georgia, serif; border: 1px solid #d6dee1; box-shadow: inset 0 0 0 7px var(--paper); }
 h1 { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 45px; font-weight: 400; letter-spacing: -.7px; line-height: 1.12; margin: 0 0 4px; }
-.tagline { margin: 0; font-size: 14px; color: #657078; line-height: 1.75; }
+.tagline { margin: 0; font-size: 16px; color: #657078; line-height: 1.75; }
 .profile { border-top: 1px solid var(--line); padding: 39px 0 10px; }
 .profile-row { display: grid; grid-template-columns: 124px 1fr; gap: 20px; margin: 0 0 31px; }
 .profile-row h2 { font-size: 13px; color: var(--muted); font-weight: 400; margin: 4px 0 0; }
@@ -71,7 +71,7 @@ footer a { text-decoration: none; }
   .identity { align-items: flex-start; flex-direction: column; gap: 24px; padding-bottom: 34px; text-align: left; }
   .portrait, .portrait-frame { flex-basis: 84px; width: 84px; height: 84px; }
   h1 { font-size: 41px; }
-  .tagline { font-size: 13px; max-width: 300px; text-align: left; }
+  .tagline { font-size: 15px; max-width: 300px; text-align: left; }
   .profile { padding-top: 29px; }
   .profile-row { gap: 10px; margin-bottom: 29px; grid-template-columns: 90px 1fr;}
   .profile-row h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; }
