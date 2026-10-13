@@ -18,6 +18,7 @@
     ] }
   ],
   "links": [
-    { "label": "Email", "url": "mailto:hello@samirbuilds.com" }
+    { "label": "Email", "url": "mailto:hello@samirbuilds.com" },
+    { "label": "Github", "url": "https://github.com/s-suleymanov" }
   ]
 }
