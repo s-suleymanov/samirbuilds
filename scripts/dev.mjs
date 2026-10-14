@@ -5,7 +5,7 @@ import { randomUUID } from 'node:crypto';
 import { build, root } from './build.mjs';
 
 const output = path.join(root, '.preview');
-const port = Number(process.env.PORT || 3005);
+const port = Number(process.env.PORT || 3004);
 const instanceId = randomUUID();
 let revision = 0;
 
