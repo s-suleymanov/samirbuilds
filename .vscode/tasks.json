@@ -1,9 +1,63 @@
 {
   "version": "2.0.0",
   "tasks": [
-    { "label": "Start local website", "type": "shell", "command": "npm run dev", "isBackground": true, "problemMatcher": [], "presentation": { "reveal": "always" } },
-    { "label": "New blog post", "type": "process", "command": "npm", "args": ["run", "new-post", "--", "${input:postTitle}"], "problemMatcher": [], "presentation": { "reveal": "always" } },
-    { "label": "Build website for Render", "type": "shell", "command": "npm run build", "problemMatcher": [] }
+    {
+      "label": "Start local website",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "New blog post",
+      "type": "process",
+      "command": "npm",
+      "args": [
+        "run",
+        "new-post",
+        "--",
+        "${input:postTitle}"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "New note",
+      "type": "process",
+      "command": "npm",
+      "args": [
+        "run",
+        "new-note",
+        "--",
+        "${input:noteTitle}"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "Build website for Render",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": []
+    }
   ],
-  "inputs": [{ "id": "postTitle", "type": "promptString", "description": "Title of your new blog post" }]
+  "inputs": [
+    {
+      "id": "postTitle",
+      "type": "promptString",
+      "description": "Title of your new blog post"
+    },
+    {
+      "id": "noteTitle",
+      "type": "promptString",
+      "description": "Short title for your note"
+    }
+  ]
 }

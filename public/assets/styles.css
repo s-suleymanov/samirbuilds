@@ -81,3 +81,21 @@ footer a { text-decoration: none; }
   .empty { padding: 30px 25px; }
   footer { font-size: 10px; }
 }
+
+/* Short notes use the same typography as the rest of the site. */
+.notes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.note-card { background: #f8f3cb; border: 1px solid #e9e2b8; padding: 23px; min-height: 210px; display: flex; flex-direction: column; gap: 24px; box-shadow: 0 2px 4px #1d2d3b06; scroll-margin-top: 24px; }
+.note-card:target { outline: 2px solid var(--accent); outline-offset: 4px; }
+.note-body { font-size: 15px; line-height: 1.75; overflow-wrap: anywhere; }
+.note-body > :first-child { margin-top: 0; }
+.note-body > :last-child { margin-bottom: 0; }
+.note-body img { max-width: 100%; height: auto; }
+.note-body pre { overflow-x: auto; }
+.note-body blockquote { margin: 0; padding-left: 14px; border-left: 2px solid #d0c68c; }
+.note-date { margin-top: auto; font-size: 11px; color: #65634f; text-decoration: none; align-self: flex-start; }
+.note-date:hover { text-decoration: underline; }
+@media (max-width: 480px) {
+  .notes-grid { grid-template-columns: 1fr; }
+  .note-card { min-height: 180px; }
+  nav { gap: 22px; }
+}

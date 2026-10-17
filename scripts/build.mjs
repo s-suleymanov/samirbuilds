@@ -52,6 +52,10 @@ export async function build({ includeDrafts = false, outputDir = path.join(root,
   const files = (await readdir(path.join(root, 'posts'))).filter(f => f.endsWith('.md')).sort();
   const posts = (await Promise.all(files.map(async file => parsePost(await readFile(path.join(root, 'posts', file), 'utf8'), file))))
     .filter(post => includeDrafts || !post.draft).sort((a, b) => b.date - a.date || a.slug.localeCompare(b.slug));
+  const noteDirectory = path.join(root, 'content/notes');
+  const noteFiles = (await readdir(noteDirectory)).filter(file => file.endsWith('.md'));
+  const notes = (await Promise.all(noteFiles.map(async file => parsePost(await readFile(path.join(noteDirectory, file), 'utf8'), file))))
+    .filter(note => includeDrafts || !note.draft).sort((a, b) => b.date - a.date || a.slug.localeCompare(b.slug));
   const shell = (content, active, title = profile.name, description = profile.tagline) => `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta name="theme-color" content="#fafaf8">
@@ -60,7 +64,7 @@ ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-prev
 <link rel="stylesheet" href="/assets/styles.css"><link rel="icon" href="/assets/favicon.svg?v=circle-5" type="image/svg+xml" sizes="any"></head>
 <body><a class="skip" href="#main">Skip to content</a><div class="site"><header>
 <a class="wordmark" href="/" aria-label="${esc(profile.name)} — home">${esc(profile.initials)}<span>.</span></a>
-<nav aria-label="Main navigation"><a href="/"${active === 'home' ? ' aria-current="page"' : ''}>Home</a><a href="/writing/"${active === 'writing' ? ' aria-current="page"' : ''}>Writing</a></nav>
+<nav aria-label="Main navigation"><a href="/"${active === 'home' ? ' aria-current="page"' : ''}>Home</a><a href="/writing/"${active === 'writing' ? ' aria-current="page"' : ''}>Writing</a><a href="/notes/"${active === 'notes' ? ' aria-current="page"' : ''}>Notes</a></nav>
 </header><main id="main">${content}</main><footer><span>© ${new Date().getFullYear()} ${esc(profile.name)}</span><a href="/">samirbuilds.com</a></footer></div></body></html>`;
   const portrait = profile.photo ? `<span class="portrait-frame" data-profile-photo><img class="portrait" src="${esc(safeUrl(profile.photo))}" alt="Portrait of ${esc(profile.name)}" draggable="false"></span>` : `<div class="portrait monogram" role="img" aria-label="${esc(profile.initials)} initials; portrait placeholder">${esc(profile.initials)}</div>`;
   const sections = profile.sections.map(section => `<section class="profile-row"><h2>${esc(section.label)}</h2><div>${section.items.map(item => `<div class="entry${item.placeholder ? ' placeholder' : ''}"><div class="entry-title">${safeUrl(item.url) ? `<a href="${esc(safeUrl(item.url))}">${esc(item.title)}</a>` : esc(item.title)}</div>${item.detail ? `<p>${esc(item.detail)}</p>` : ''}</div>`).join('')}</div></section>`).join('');
@@ -68,6 +72,8 @@ ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-prev
   const home = `<section class="identity">${portrait}<div><h1>${esc(profile.name)}</h1><p class="tagline">${esc(profile.tagline)}</p></div></section>
 <div class="profile">${sections}<section class="profile-row"><h2>Links</h2><div class="socials">${links}</div></section></div>`;
   const writing = `<section class="post-list" aria-label="Writing">${posts.length ? posts.map(post => `<a class="post-card" href="/writing/${post.slug}/"><h2>${esc(post.title)}</h2><p>${esc(post.description)}</p></a>`).join('') : '<p class="no-posts">No posts yet.</p>'}</section>`;
+  const notesPage = `<section class="page-intro"><h1>Notes</h1></section>
+<section class="notes-grid" aria-label="Notes">${notes.length ? notes.map(note => `<article class="note-card" id="${esc(note.slug)}" aria-label="${esc(note.title)}"><div class="note-body">${note.html}</div><a class="note-date" href="#${esc(note.slug)}" aria-label="Link to ${esc(note.title)}"><time datetime="${esc(note.isoDate)}">${note.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time></a></article>`).join('') : '<p class="no-posts">No notes yet. Check back soon.</p>'}</section>`;
   // Clear only generated output, never the author's source files.
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
@@ -75,6 +81,8 @@ ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-prev
   await writeFile(path.join(output, 'index.html'), shell(home, 'home'));
   await mkdir(path.join(output, 'writing'), { recursive: true });
   await writeFile(path.join(output, 'writing/index.html'), shell(writing, 'writing', `Writing — ${profile.name}`));
+  await mkdir(path.join(output, 'notes'), { recursive: true });
+  await writeFile(path.join(output, 'notes/index.html'), shell(notesPage, 'notes', `Notes — ${profile.name}`, 'Quick thoughts, reminders, and things I’m learning.'));
   for (const post of posts) {
     const directory = path.join(output, 'writing', post.slug);
     await mkdir(directory, { recursive: true });

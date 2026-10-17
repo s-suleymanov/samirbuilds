@@ -78,3 +78,13 @@ Run `npm run build` to generate the production website. Never edit `dist/`; it i
 Cloudflare's root (`@`) and `www` CNAME records should point to the eventual Render hostname. Keep them DNS-only until Render verifies the domain and issues its HTTPS certificate.
 
 The local website is ready. GitHub/Render deployment and Cloudflare nameserver activation still need completion; running the local server does not publish the site.
+
+## Add a quick note
+
+Choose **Terminal → Run Task → New note** in VS Code, or run:
+
+```sh
+npm run new-note -- "A quick thought"
+```
+
+Edit the new Markdown file in `content/notes/`. Write your snippet below the metadata block. The title labels the note for accessibility; the card displays the text and date. Notes appear newest first at `/notes/`, and clicking a date links to that card. Local preview includes drafts; change `draft: true` to `draft: false` to include a note in the production build. Delete its Markdown file to remove a note. Save with Command-S to refresh the local preview.
