@@ -1,4 +1,4 @@
-# Samuel Suleyman — personal website
+# Sam Sully — personal website
 
 A formal profile and a Markdown blog for samirbuilds.com.
 
