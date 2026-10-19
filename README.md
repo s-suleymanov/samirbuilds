@@ -1,4 +1,4 @@
-# Samir Suleymanov — personal website
+# Samuel Suleyman — personal website
 
 A formal profile and a Markdown blog for samirbuilds.com.
 
