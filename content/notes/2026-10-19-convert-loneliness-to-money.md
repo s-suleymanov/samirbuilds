@@ -1,7 +1,7 @@
 ---
-title: Convert loneliness to money
+title: Convert loneliness to experience points
 date: 2026-10-19
 draft: false
 ---
 
-Convert loneliness to money
+Convert loneliness to experience points
