@@ -10,7 +10,7 @@
       { "title": "Co-founder", "detail": "Launch @ UCLA", "url": "", "placeholder": false },
       { "title": "Co-founder", "detail": "Savo (formerly PriceCheck)", "url": "", "placeholder": false }
     ] },
-    { "label": "Education", "items": [{ "title": "University of California, Los Angeles", "detail": "Current student · Computer Science & Cognitive Science", "url": "", "placeholder": false }] },
+    { "label": "Education", "items": [{ "title": "University of California, Los Angeles", "detail": "Current · Computer Science & Cognitive Science", "url": "", "placeholder": false }] },
     { "label": "Investing", "items": [
       { "title": "Consumer hardware", "detail": "Investing in a vacuum cleaner company.", "url": "", "placeholder": false },
       { "title": "AI patent automation", "detail": "Investing in a patent automation platform.", "url": "", "placeholder": false }
