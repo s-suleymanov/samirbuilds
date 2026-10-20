@@ -5,10 +5,10 @@
   "photo": "/assets/profile.png",
   "sections": [
     { "label": "Currently", "items": [
-      { "title": "Founder", "detail": "Retail Data Indexing Platform", "url": "", "placeholder": false },
-      { "title": "Co-founder", "detail": "Automated B2B Lead Intelligence Software", "url": "", "placeholder": false },
+      { "title": "Founder", "detail": "Agentic Enterprise Software", "url": "", "placeholder": false },
+      { "title": "Co-founder", "detail": "Alendur", "url": "", "placeholder": false },
       { "title": "Co-founder", "detail": "Launch @ UCLA", "url": "", "placeholder": false },
-      { "title": "Co-founder", "detail": "Savo", "url": "", "placeholder": false }
+      { "title": "Co-founder", "detail": "Savo (formerly PriceCheck)", "url": "", "placeholder": false }
     ] },
     { "label": "Previously", "items": [{ "title": "TBA", "detail": "", "url": "", "placeholder": false }] },
     { "label": "Education", "items": [{ "title": "University of California, Los Angeles", "detail": "Current student · Computer Science & Cognitive Science", "url": "", "placeholder": false }] },
