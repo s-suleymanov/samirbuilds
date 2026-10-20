@@ -87,7 +87,7 @@ ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-prev
   for (const post of posts) {
     const directory = path.join(output, 'writing', post.slug);
     await mkdir(directory, { recursive: true });
-    const content = `<div class="article-head"><h1>${esc(post.title)}</h1></div><article class="article">${post.html}</article>`;
+    const content = `<div class="article-head"><h1>${esc(post.title)}</h1>${post.description ? `<p class="article-subheading">${esc(post.description)}</p>` : ''}</div><article class="article">${post.html}</article>`;
     await writeFile(path.join(directory, 'index.html'), shell(content, 'writing', `${post.title} — ${profile.name}`, post.description));
   }
   return posts.length;

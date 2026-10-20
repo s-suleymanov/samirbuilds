@@ -55,6 +55,7 @@ footer a { text-decoration: none; }
 .empty p { color: var(--muted); font-size: 14px; line-height: 1.8; margin: 0; max-width: 390px; }
 .article-head { margin: 9px 0 32px; }
 .article-head h1 { font-size: 51px; line-height: 1.16; margin: 26px 0 18px; }
+.article-subheading { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
 .article-meta { color: var(--muted); font-size: 12px; }
 .article { border-top: 1px solid var(--line); padding-top: 19px; font-size: 16px; line-height: 1.9; }
 .article p { margin: 19px 0; }
