@@ -4,15 +4,14 @@
   "tagline": "Entrepreneur and startup investor.",
   "photo": "/assets/profile.png",
   "sections": [
-    { "label": "Currently", "items": [{ "title": "TBA", "detail": "", "url": "", "placeholder": false }] },
-    { "label": "Previously", "items": [{ "title": "TBA", "detail": "", "url": "", "placeholder": false }] },
-    { "label": "Education", "items": [{ "title": "University of California, Los Angeles", "detail": "Current student · Computer Science & Cognitive Science", "url": "", "placeholder": false }] },
-    { "label": "Projects", "items": [
+    { "label": "Currently", "items": [
       { "title": "Founder", "detail": "Retail Data Indexing Platform", "url": "", "placeholder": false },
       { "title": "Co-founder", "detail": "Automated B2B Lead Intelligence Software", "url": "", "placeholder": false },
       { "title": "Co-founder", "detail": "Launch @ UCLA", "url": "", "placeholder": false },
       { "title": "Co-founder", "detail": "Savo", "url": "", "placeholder": false }
     ] },
+    { "label": "Previously", "items": [{ "title": "TBA", "detail": "", "url": "", "placeholder": false }] },
+    { "label": "Education", "items": [{ "title": "University of California, Los Angeles", "detail": "Current student · Computer Science & Cognitive Science", "url": "", "placeholder": false }] },
     { "label": "Investing", "items": [
       { "title": "Consumer hardware", "detail": "Investing in a vacuum cleaner company.", "url": "", "placeholder": false },
       { "title": "AI patent automation", "detail": "Investing in a patent automation platform.", "url": "", "placeholder": false }
