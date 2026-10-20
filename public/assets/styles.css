@@ -29,6 +29,8 @@ h1 { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 45px; font-
 .placeholder .entry-title { color: #657078; font-weight: 400; }
 .placeholder p { color: #69757d; }
 .socials { display: flex; flex-wrap: wrap; gap: 10px 19px; line-height: 1.7; font-size: 14px; }
+.interests { margin: 0; font-size: 14px; line-height: 1.8; }
+.interest { white-space: nowrap; }
 .unset-link { color: #69757d; }
 .writing-teaser { border-top: 1px solid var(--line); padding: 28px 0 5px; margin-top: 4px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .writing-teaser h2 { margin: 0 0 7px; font-size: 15px; font-weight: 550; }
