@@ -1,7 +1,7 @@
 ---
-title: "Interface"
+title: "Interface or proface"
 date: 2026-10-12
-description: Purpose of higher education
+description: Benefits and drawbacks of higher education
 draft: false
 ---
 
