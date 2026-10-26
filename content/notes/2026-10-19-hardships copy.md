@@ -1,0 +1,7 @@
+---
+title: Convert loneliness to experience points
+date: 2026-10-26
+draft: false
+---
+
+“No matter how isolated you are and how lonely you feel, if you do your work truly and conscientiously, unknown allies will come and seek you.” - Carl Jung
