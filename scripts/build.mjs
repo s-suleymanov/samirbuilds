@@ -61,6 +61,7 @@ export async function build({ includeDrafts = false, outputDir = path.join(root,
 <meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta name="theme-color" content="#fafaf8">
 <style data-embedded-fonts>${fontStyles}</style>
 ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-preview:none"><script src="/assets/profile-controls.js" defer></script>' : ''}
+${active === 'notes' ? '<script src="/assets/notes.js" defer></script>' : ''}
 <link rel="stylesheet" href="/assets/styles.css"><link rel="icon" href="/assets/favicon.svg?v=circle-5" type="image/svg+xml" sizes="any"></head>
 <body><a class="skip" href="#main">Skip to content</a><div class="site"><header>
 <a class="wordmark" href="/" aria-label="${esc(profile.name)} — home">${esc(profile.initials)}<span>.</span></a>
@@ -74,7 +75,7 @@ ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-prev
 <div class="profile">${sections}<section class="profile-row"><h2>Links</h2><div class="socials">${links}</div></section>${interests}</div>`;
   const writing = `<section class="post-list" aria-label="Writing">${posts.length ? posts.map(post => `<a class="post-card" href="/writing/${post.slug}/"><h2>${esc(post.title)}</h2><p>${esc(post.description)}</p></a>`).join('') : '<p class="no-posts">No posts yet.</p>'}</section>`;
   const notesPage = `<section class="page-intro"><h1>Notes</h1></section>
-<section class="notes-grid" aria-label="Notes">${notes.length ? notes.map(note => `<article class="note-card" id="${esc(note.slug)}" aria-label="${esc(note.title)}"><div class="note-body">${note.html}</div><a class="note-date" href="#${esc(note.slug)}" aria-label="Link to ${esc(note.title)}"><time datetime="${esc(note.isoDate)}">${note.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time></a></article>`).join('') : '<p class="no-posts">No notes yet. Check back soon.</p>'}</section>`;
+<section class="notes-grid" aria-label="Notes">${notes.length ? notes.map(note => `<article class="note-card" id="${esc(note.slug)}" aria-label="${esc(note.title)}"><div class="note-body" id="body-${esc(note.slug)}">${note.html}</div><button class="note-toggle" type="button" aria-expanded="false" aria-controls="body-${esc(note.slug)}" hidden>See more</button><a class="note-date" href="#${esc(note.slug)}" aria-label="Link to ${esc(note.title)}"><time datetime="${esc(note.isoDate)}">${note.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time></a></article>`).join('') : '<p class="no-posts">No notes yet. Check back soon.</p>'}</section>`;
   // Clear only generated output, never the author's source files.
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });

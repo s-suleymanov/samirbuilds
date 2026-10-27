@@ -102,3 +102,9 @@ footer a { text-decoration: none; }
   .note-card { min-height: 180px; }
   nav { gap: 22px; }
 }
+
+/* Long notes and quotes stay compact until the reader opens them. */
+.note-body.is-collapsed { max-height: 14rem; overflow: hidden; }
+.note-toggle { align-self: flex-start; padding: 0; border: 0; background: none; color: inherit; font: inherit; font-size: 13px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.note-toggle[hidden] { display: none; }
+.note-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
