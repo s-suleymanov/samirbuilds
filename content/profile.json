@@ -11,7 +11,7 @@
     ] },
     { "label": "Education", "items": [{ "title": "University of California, Los Angeles", "detail": "Current · Computer Science & Cognitive Science", "url": "", "placeholder": false }] },
     { "label": "Investing", "items": [
-      { "title": "Consumer hardware", "detail": "Investing in a vacuum cleaner company.", "url": "", "placeholder": false },
+      { "title": "Consumer hardware", "detail": "Investing in a vacuum cleaner startup.", "url": "", "placeholder": false },
       { "title": "AI patent automation", "detail": "Investing in a patent automation platform.", "url": "", "placeholder": false }
     ] }
   ],
