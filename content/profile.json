@@ -5,7 +5,7 @@
   "photo": "/assets/profile.png",
   "sections": [
     { "label": "Currently", "items": [
-      { "title": "Co-founder", "detail": "Alendur", "url": "", "placeholder": false },
+      { "title": "Founder", "detail": "Alendur", "url": "", "placeholder": false },
       { "title": "Co-founder", "detail": "Launch @ UCLA", "url": "", "placeholder": false },
       { "title": "Co-founder", "detail": "Savo (formerly PriceCheck)", "url": "", "placeholder": false }
     ] },
