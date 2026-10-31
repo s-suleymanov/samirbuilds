@@ -4,4 +4,4 @@ date: 2026-10-31
 draft: false
 ---
 
-Entrepreneurs live with relentless uncertainty and delay to build something that matters.
+Entrepreneurs bear relentless uncertainty and delay so others don’t have to.
