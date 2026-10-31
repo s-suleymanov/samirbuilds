@@ -4,4 +4,4 @@ date: 2026-10-31
 draft: false
 ---
 
-Entrepreneurs bear relentless uncertainty and delay so others don’t have to.
+Entrepreneurs have to bear relentless uncertainty and delay so others don’t have to.
