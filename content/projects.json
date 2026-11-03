@@ -12,13 +12,14 @@
     "video": "/assets/projects/drones.mp4"
   },
   {
-    "name": "Machine Learning",
-    "image": "/assets/projects/machine-learning.png",
-    "url": ""
-  },
-  {
     "name": "Planes",
     "image": "/assets/projects/planes.png",
+    "url": "",
+    "video": "/assets/projects/planes.mp4"
+  },
+  {
+    "name": "Machine Learning",
+    "image": "/assets/projects/machine-learning.png",
     "url": ""
   },
   {
