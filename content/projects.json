@@ -32,5 +32,15 @@
     "image": "",
     "url": "",
     "status": "In progress"
+  },
+  {
+    "name": "PriceCheck",
+    "image": "/assets/projects/pricecheck.png",
+    "url": ""
+  },
+  {
+    "name": "Pathfinding Algorithms",
+    "image": "/assets/projects/pathfinding-algorithms.png",
+    "url": ""
   }
 ]
