@@ -108,3 +108,24 @@ footer a { text-decoration: none; }
 .note-toggle { align-self: flex-start; padding: 0; border: 0; background: none; color: inherit; font: inherit; font-size: 13px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .note-toggle[hidden] { display: none; }
 .note-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* Image-led showcase with the site's existing paper and typography. */
+.site-showcase { max-width: 570px; }
+.site-showcase .page-intro { padding-bottom: 44px; }
+.project-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 38px; }
+.project-card { min-width: 0; }
+.project-image { aspect-ratio: 4 / 5; overflow: hidden; border-radius: 8px; background: #eef0ed; border: 1px solid var(--line); display: grid; place-items: center; }
+.project-image img, .project-image video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.project-image-placeholder { padding: 24px; text-align: center; font: 400 30px/1.2 'Libre Caslon Display', Georgia, serif; color: #8b969a; }
+.project-caption { padding-top: 17px; }
+.project-role { margin: 0 0 7px; font-size: 11px; color: var(--muted); }
+.project-card h2 { margin: 0; font: 400 28px/1.25 'Libre Caslon Display', Georgia, serif; letter-spacing: -.3px; }
+.project-card h2 a { text-decoration: none; }
+.project-card h2 span { font: 16px 'DM Sans', sans-serif; color: var(--muted); }
+.project-description { margin: 8px 0 0; font-size: 13px; line-height: 1.75; color: var(--muted); }
+
+@media (max-width: 480px) {
+  header { gap: 18px; flex-wrap: wrap; }
+  nav { gap: 18px; flex-wrap: wrap; }
+  .project-list { grid-template-columns: 1fr; gap: 32px; }
+}

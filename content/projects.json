@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Autonomous Rover",
+    "image": "/assets/projects/autonomous-rover-poster.png",
+    "url": "",
+    "video": "/assets/projects/autonomous-rover.mp4"
+  },
+  {
+    "name": "Drones",
+    "image": "/assets/projects/drones-poster.png",
+    "url": "",
+    "video": "/assets/projects/drones.mp4"
+  },
+  {
+    "name": "Machine Learning",
+    "image": "/assets/projects/machine-learning.png",
+    "url": ""
+  },
+  {
+    "name": "Planes",
+    "image": "/assets/projects/planes.png",
+    "url": ""
+  }
+]
