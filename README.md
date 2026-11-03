@@ -25,11 +25,9 @@ To replace your portrait, replace `public/assets/profile.png`, or place another 
 
 Edit `content/profile.json`, files in `posts/`, and assets in `public/`. The `.preview/` and `dist/` folders are generated output and should not be edited.
 
-## Profile photo indexing and copying
+## Profile photo indexing
 
-`public/robots.txt` asks crawlers not to crawl the profile photo, and the homepage uses Google's `noimageindex` and `max-image-preview:none` directives. The photo cannot be dragged normally; its image context menu and iOS touch callout are disabled. The image keeps accessible alt text.
-
-These measures are not access control. Any photo shown on a public page can still be downloaded through developer tools or captured in a screenshot. A private image requires restricting access or removing it from the public page. The site is currently localhost-only. When deployed, `robots.txt` and the homepage directives will be published with it. If you change the photo URL, update its matching rule in `public/robots.txt`.
+The homepage portrait is crawlable and eligible for image search. The homepage allows large image previews and identifies the portrait with Open Graph, Twitter image metadata, and ProfilePage/Person/ImageObject structured data. Google controls indexing timing and search-result thumbnail selection. The circular portrait styling remains unchanged.
 
 ## Embedded fonts
 

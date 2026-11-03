@@ -61,7 +61,12 @@ export async function build({ includeDrafts = false, outputDir = path.join(root,
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta name="theme-color" content="#fafaf8">
 <style data-embedded-fonts>${fontStyles}</style>
-${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-preview:none"><script src="/assets/profile-controls.js" defer></script>' : ''}
+${active === 'home' ? `<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://samirbuilds.com/">
+<meta property="og:type" content="profile"><meta property="og:title" content="${esc(profile.name)}"><meta property="og:description" content="${esc(profile.tagline)}"><meta property="og:url" content="https://samirbuilds.com/">
+<meta property="og:image" content="${esc(new URL(profile.photo, 'https://samirbuilds.com/').href)}"><meta property="og:image:alt" content="Portrait of ${esc(profile.name)}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${esc(new URL(profile.photo, 'https://samirbuilds.com/').href)}">
+<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [ { '@type': 'ProfilePage', '@id': 'https://samirbuilds.com/#profile', url: 'https://samirbuilds.com/', name: profile.name, primaryImageOfPage: { '@id': 'https://samirbuilds.com/#portrait' }, mainEntity: { '@id': 'https://samirbuilds.com/#person' } }, { '@type': 'Person', '@id': 'https://samirbuilds.com/#person', name: profile.name, url: 'https://samirbuilds.com/', image: { '@id': 'https://samirbuilds.com/#portrait' } }, { '@type': 'ImageObject', '@id': 'https://samirbuilds.com/#portrait', contentUrl: new URL(profile.photo, 'https://samirbuilds.com/').href, caption: 'Portrait of ' + profile.name } ] }).replaceAll('<', '\u003c')}</script>` : ''}
 ${active === 'notes' ? '<script src="/assets/notes.js" defer></script>' : ''}
 <link rel="stylesheet" href="/assets/styles.css"><link rel="icon" href="/assets/favicon.svg?v=circle-5" type="image/svg+xml" sizes="any"></head>
 <body><a class="skip" href="#main">Skip to content</a><div class="site${active === 'projects' ? ' site-projects' : ''}"><header>
