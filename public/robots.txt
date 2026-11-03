@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /assets/projects/rockets.png
+Disallow: /assets/projects/underwater-vehicles.png
