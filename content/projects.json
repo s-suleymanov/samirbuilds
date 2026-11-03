@@ -20,5 +20,17 @@
     "name": "Planes",
     "image": "/assets/projects/planes.png",
     "url": ""
+  },
+  {
+    "name": "Autonomous Submersibles",
+    "image": "",
+    "url": "",
+    "status": "In progress"
+  },
+  {
+    "name": "Rockets",
+    "image": "",
+    "url": "",
+    "status": "In progress"
   }
 ]

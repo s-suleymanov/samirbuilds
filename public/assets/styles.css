@@ -129,3 +129,6 @@ footer a { text-decoration: none; }
   nav { gap: 18px; flex-wrap: wrap; }
   .project-list { grid-template-columns: 1fr; gap: 32px; }
 }
+
+.project-dots { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.project-dots > span { width: 9px; height: 9px; border-radius: 50%; background: #9aa1a4; }
