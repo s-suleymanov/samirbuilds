@@ -64,9 +64,9 @@ export async function build({ includeDrafts = false, outputDir = path.join(root,
 ${active === 'home' ? '<meta name="robots" content="noimageindex, max-image-preview:none"><script src="/assets/profile-controls.js" defer></script>' : ''}
 ${active === 'notes' ? '<script src="/assets/notes.js" defer></script>' : ''}
 <link rel="stylesheet" href="/assets/styles.css"><link rel="icon" href="/assets/favicon.svg?v=circle-5" type="image/svg+xml" sizes="any"></head>
-<body><a class="skip" href="#main">Skip to content</a><div class="site${active === 'showcase' ? ' site-showcase' : ''}"><header>
+<body><a class="skip" href="#main">Skip to content</a><div class="site${active === 'projects' ? ' site-projects' : ''}"><header>
 <a class="wordmark" href="/" aria-label="${esc(profile.name)} — home">${esc(profile.initials)}<span>.</span></a>
-<nav aria-label="Main navigation"><a href="/"${active === 'home' ? ' aria-current="page"' : ''}>Home</a><a href="/showcase/"${active === 'showcase' ? ' aria-current="page"' : ''}>Showcase</a><a href="/writing/"${active === 'writing' ? ' aria-current="page"' : ''}>Writing</a><a href="/notes/"${active === 'notes' ? ' aria-current="page"' : ''}>Notes</a></nav>
+<nav aria-label="Main navigation"><a href="/"${active === 'home' ? ' aria-current="page"' : ''}>Home</a><a href="/projects/"${active === 'projects' ? ' aria-current="page"' : ''}>Projects</a><a href="/writing/"${active === 'writing' ? ' aria-current="page"' : ''}>Writing</a><a href="/notes/"${active === 'notes' ? ' aria-current="page"' : ''}>Notes</a></nav>
 </header><main id="main">${content}</main><footer><span>© ${new Date().getFullYear()} ${esc(profile.name)}</span><a href="/">samirbuilds.com</a></footer></div></body></html>`;
   const portrait = profile.photo ? `<span class="portrait-frame" data-profile-photo><img class="portrait" src="${esc(safeUrl(profile.photo))}" alt="Portrait of ${esc(profile.name)}" draggable="false"></span>` : `<div class="portrait monogram" role="img" aria-label="${esc(profile.initials)} initials; portrait placeholder">${esc(profile.initials)}</div>`;
   const sections = profile.sections.map(section => `<section class="profile-row"><h2>${esc(section.label)}</h2><div>${section.items.map(item => `<div class="entry${item.placeholder ? ' placeholder' : ''}"><div class="entry-title">${safeUrl(item.url) ? `<a href="${esc(safeUrl(item.url))}">${esc(item.title)}</a>` : esc(item.title)}</div>${item.detail ? `<p>${esc(item.detail)}</p>` : ''}</div>`).join('')}</div></section>`).join('');
@@ -74,7 +74,7 @@ ${active === 'notes' ? '<script src="/assets/notes.js" defer></script>' : ''}
   const interests = profile.interests?.length ? `<section class="profile-row"><h2>Interests</h2><p class="interests">${profile.interests.map(interest => `<span class="interest">${esc(interest)}</span>`).join(' · ')}</p></section>` : '';
   const home = `<section class="identity">${portrait}<div><h1>${esc(profile.name)}</h1><p class="tagline">${esc(profile.tagline)}</p></div></section>
 <div class="profile">${sections}<section class="profile-row"><h2>Links</h2><div class="socials">${links}</div></section>${interests}</div>`;
-  const showcase = `<section class="page-intro"><h1>Showcase</h1></section>
+  const projectsPage = `<section class="page-intro"><h1>Projects</h1></section>
 <section class="project-list" aria-label="Projects">${projects.map(project => `<article class="project-card"><div class="project-image">${safeUrl(project.video) ? `<video autoplay muted loop playsinline preload="metadata" poster="${esc(safeUrl(project.image))}" aria-label="${esc(project.name)} project video"><source src="${esc(safeUrl(project.video))}" type="video/mp4"></video>` : safeUrl(project.image) ? `<img src="${esc(safeUrl(project.image))}" alt="${esc(project.name)}" loading="lazy">` : `<span class="project-image-placeholder">${esc(project.name)}</span>`}</div><div class="project-caption"><h2>${safeUrl(project.url) ? `<a href="${esc(safeUrl(project.url))}">${esc(project.name)} <span aria-hidden="true">↗</span></a>` : esc(project.name)}</h2>${project.description ? `<p class="project-description">${esc(project.description)}</p>` : ''}</div></article>`).join('')}</section>`;
   const writing = `<section class="post-list" aria-label="Writing">${posts.length ? posts.map(post => `<a class="post-card" href="/writing/${post.slug}/"><h2>${esc(post.title)}</h2><p>${esc(post.description)}</p></a>`).join('') : '<p class="no-posts">No posts yet.</p>'}</section>`;
   const notesPage = `<section class="page-intro"><h1>Notes</h1></section>
@@ -84,8 +84,8 @@ ${active === 'notes' ? '<script src="/assets/notes.js" defer></script>' : ''}
   await mkdir(output, { recursive: true });
   await cp(path.join(root, 'public'), output, { recursive: true });
   await writeFile(path.join(output, 'index.html'), shell(home, 'home'));
-  await mkdir(path.join(output, 'showcase'), { recursive: true });
-  await writeFile(path.join(output, 'showcase/index.html'), shell(showcase, 'showcase', `Showcase — ${profile.name}`, 'Projects by Samir Suleymanov.'));
+  await mkdir(path.join(output, 'projects'), { recursive: true });
+  await writeFile(path.join(output, 'projects/index.html'), shell(projectsPage, 'projects', `Projects — ${profile.name}`, 'Projects by Samir Suleymanov.'));
   await mkdir(path.join(output, 'writing'), { recursive: true });
   await writeFile(path.join(output, 'writing/index.html'), shell(writing, 'writing', `Writing — ${profile.name}`));
   await mkdir(path.join(output, 'notes'), { recursive: true });

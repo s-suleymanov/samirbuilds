@@ -89,6 +89,6 @@ npm run new-note -- "A quick thought"
 
 Edit the new Markdown file in `content/notes/`. Write your snippet below the metadata block. The title labels the note for accessibility; the card displays the text and date. Notes appear newest first at `/notes/`, and clicking a date links to that card. Local preview includes drafts; change `draft: true` to `draft: false` to include a note in the production build. Delete its Markdown file to remove a note. Save with Command-S to refresh the local preview.
 
-## Update Showcase
+## Update Projects
 
-Edit `content/projects.json` to add or reorder projects at `/showcase/`. Each entry has `name`, `image`, and `url` fields, plus an optional `video` path for a muted, autoplaying loop. Store project media in `public/assets/projects/`. Leave `url` empty until a real project link is ready. Save and refresh the preview; run `npm run build` for production.
+Edit `content/projects.json` to add or reorder projects at `/projects/`. Each entry has `name`, `image`, and `url` fields, plus an optional `video` path for a muted, autoplaying loop. Store project media in `public/assets/projects/`. Leave `url` empty until a real project link is ready. Save and refresh the preview; run `npm run build` for production.

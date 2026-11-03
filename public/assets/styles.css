@@ -109,9 +109,9 @@ footer a { text-decoration: none; }
 .note-toggle[hidden] { display: none; }
 .note-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
-/* Image-led showcase with the site's existing paper and typography. */
-.site-showcase { max-width: 570px; }
-.site-showcase .page-intro { padding-bottom: 44px; }
+/* Image-led projects with the site's existing paper and typography. */
+.site-projects { max-width: 570px; }
+.site-projects .page-intro { padding-bottom: 44px; }
 .project-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 38px; }
 .project-card { min-width: 0; }
 .project-image { aspect-ratio: 4 / 5; overflow: hidden; border-radius: 8px; background: #eef0ed; border: 1px solid var(--line); display: grid; place-items: center; }
