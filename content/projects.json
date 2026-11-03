@@ -12,7 +12,7 @@
     "video": "/assets/projects/drones.mp4"
   },
   {
-    "name": "Planes",
+    "name": "Fixed Wing Payload Delivery",
     "image": "/assets/projects/planes.png",
     "url": "",
     "video": "/assets/projects/planes.mp4"
@@ -28,7 +28,7 @@
     "url": ""
   },
   {
-    "name": "Autonomous Underwater Vehicles (AUVs)",
+    "name": "Autonomous Underwater Vehicles",
     "image": "",
     "url": "",
     "status": "In progress"
