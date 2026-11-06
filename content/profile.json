@@ -21,7 +21,7 @@
   "interests": ["Robotics", "Drones", "Space Mining", "Autonomous Manufacturing"],
   "links": [
     { "label": "Email", "url": "mailto:hello@samirbuilds.com" },
-    { "label": "Text (323) 539-7189", "url": "sms:+13235397189" },
+    { "label": "Text", "url": "sms:+13235397189" },
     { "label": "GitHub", "url": "https://github.com/s-suleymanov" }
   ]
 }
