@@ -25,6 +25,8 @@ h1 { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 45px; font-
 .profile-row h2 { font-size: 13px; color: var(--muted); font-weight: 400; margin: 4px 0 0; }
 .entry + .entry { margin-top: 21px; }
 .entry-title { font-size: 16px; font-weight: 550; line-height: 1.5; }
+.entry-logo { display: block; height: 34px; width: auto; margin: -2px 0 0 -4px; mix-blend-mode: multiply; }
+.entry-title a:has(.entry-logo) { display: inline-block; }
 .entry p { font-size: 13px; line-height: 1.7; margin: 4px 0 0; color: var(--muted); }
 .placeholder .entry-title { color: #657078; font-weight: 400; }
 .placeholder p { color: #69757d; }

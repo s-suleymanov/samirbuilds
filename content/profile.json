@@ -13,6 +13,9 @@
     { "label": "Investing", "items": [
       { "title": "Consumer hardware", "detail": "Investing in a vacuum cleaner startup.", "url": "", "placeholder": false },
       { "title": "AI patent automation", "detail": "Investing in a patent automation platform.", "url": "", "placeholder": false }
+    ] },
+    { "label": "Philanthropy", "items": [
+      { "title": "MSPCA", "logo": "/assets/mspca-logo.png", "detail": "", "url": "https://www.mspca.org", "placeholder": false }
     ] }
   ],
   "interests": ["Robotics", "Drones", "Space Mining", "Autonomous Manufacturing"],
