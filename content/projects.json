@@ -30,13 +30,11 @@
   {
     "name": "Autonomous Underwater Vehicles",
     "image": "/assets/projects/underwater-vehicles.png",
-    "url": "",
-    "status": "In progress"
+    "url": ""
   },
   {
     "name": "Rockets",
     "image": "/assets/projects/rockets.png",
-    "url": "",
-    "status": "In progress"
+    "url": ""
   }
 ]

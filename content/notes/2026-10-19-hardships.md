@@ -1,5 +1,5 @@
 ---
-title: Convert loneliness to experience points
+title: Where you deserve to be
 date: 2026-10-23
 draft: false
 ---
