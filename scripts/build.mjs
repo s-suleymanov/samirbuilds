@@ -8,7 +8,7 @@ export const output = path.join(root, 'dist');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl = value => {
   const url = String(value || '').trim();
-  if (/^(https?:\/\/|mailto:)/i.test(url) || (/^(\/|#|\.\/|\.\.\/)/.test(url) && !url.startsWith('//'))) return url;
+  if (/^(https?:\/\/|mailto:|sms:|tel:)/i.test(url) || (/^(\/|#|\.\/|\.\.\/)/.test(url) && !url.startsWith('//'))) return url;
   return '';
 };
 const markdownUrl = value => safeUrl(value) || (!/^[a-z][a-z\d+.-]*:/i.test(value) && !value.startsWith('//') ? value : '');
